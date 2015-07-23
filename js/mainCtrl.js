@@ -22,7 +22,16 @@ app.controller('mainCtrl', function($scope, itunesService){
 
   //First inject itunesService into your controller.
 
-    //code here
+  $scope.getSongData = function(){
+    
+     itunesService.getSong().then(function(theArtist) {
+      console.log (theArtist);
+      $scope.songData = theArtist;
+    });
+  }
+
+ // $scope.getSongData();
+  
 
 
   //Now write a function that will call the method on the itunesService that is responsible for getting the data from iTunes, whenever the user clicks the submit button
@@ -54,7 +63,10 @@ app.controller('mainCtrl', function($scope, itunesService){
 
   //Once you have that final data array, you simply need to put it on the scope (or more specifically on the scope as songData). Once you do this ($scope.songData = myFinalArray) then ng-grid will see that and populate the page.
 
-    //Code here
+  
+
+
+
 });
 
 
