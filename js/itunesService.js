@@ -26,6 +26,8 @@ app.service('itunesService', function($http, $q){
     					CollectionPrice: parsedResponse[i].collectionPrice,
     					Play: parsedResponse[i].previewUrl,
     					Type: parsedResponse[i].kind,
+              Genre: parsedResponse[i].primaryGenreName,
+              AddingColum:"Rubi, the weird girl from DevMtn",
     				})
 
     			};
